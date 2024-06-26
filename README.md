@@ -2,7 +2,7 @@
 Some my bash scripts to build vyos image and its packages from source
 
 # What you need for build
-1. Debian Virtual or Hardware Machine (Debian 10 for VySs 1.3 and Debian 12 for VyOs 1.4). (I don`t like Docker, but you can adopt this to run in docker.)
+1. Debian Virtual or Hardware Machine (Debian 10 for VyOs 1.3 and Debian 12 for VyOs 1.4). (I don`t like Docker, but you can adopt this to run in docker.)
 2. LocalHost or Remote Web-Server, that will host your Private Repo of Vyos Packages. (Some instructions you can find here https://habr.com/ru/articles/543854/)
 
 # Build Instructions
