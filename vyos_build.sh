@@ -67,6 +67,7 @@ sudo apt -y install freeradius gnutls-bin gss-ntlmssp haproxy libcjose-dev libcu
 #Uncomment on first clone#
 ##########################
 #Clone VyOs Repo before new Build (This will delete Kernel!!!!)
+#cd $GITDIR/
 #rm -rf ./vyos-build
 #git clone https://github.com/vyos/vyos-build.git
 
