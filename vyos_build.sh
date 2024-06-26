@@ -84,10 +84,12 @@ git checkout $VYOSVER
 #Prereq Section (Auto Prereq from DockerFile)
 #PREREQTMPFILE=/tmp/prereq.sh
 #export PREREQTMPFILE
+#cd $ROOTDIR
 #./build/prereq_auto.sh
 #chmod +x $PREREQTMPFILE
 #eval $PREREQTMPFILE
 
+#cd $ROOTDIR
 #./build/prereq.sh #Manual Made File
 
 #CleanUp before Build
