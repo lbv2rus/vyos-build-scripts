@@ -67,7 +67,7 @@ sudo apt -y install freeradius gnutls-bin gss-ntlmssp haproxy libcjose-dev libcu
 #Uncomment on first clone#
 ##########################
 #Clone VyOs Repo before new Build (This will delete Kernel!!!!)
-#cd $GITDIR/
+#cd $GITDIR
 #rm -rf ./vyos-build
 #git clone https://github.com/vyos/vyos-build.git
 
@@ -84,13 +84,11 @@ git checkout $VYOSVER
 #Prereq Section (Auto Prereq from DockerFile)
 #PREREQTMPFILE=/tmp/prereq.sh
 #export PREREQTMPFILE
-#cd $ROOTDIR
-#./build/prereq_auto.sh
+#${ROOTDIR}/build/prereq_auto.sh
 #chmod +x $PREREQTMPFILE
 #eval $PREREQTMPFILE
 
-#cd $ROOTDIR
-#./build/prereq.sh #Manual Made File
+#${ROOTDIR}/build/prereq.sh #Manual Made File
 
 #CleanUp before Build
 cd $GITDIR
@@ -104,7 +102,7 @@ read -p "Do you want to (re)build Kernel now? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./build/linux_kernel.sh
+	./build/linux_kernel.sh
 	./build/linux_kernel_firmware.sh	
 fi
 
@@ -194,7 +192,6 @@ read -p "Do you want to Build VyOS ${VERSION}?" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	
 	#Change LTS Repo URL from Vyos Internal Local to our	
 	if [[ $VYOSVER =~ ^1\.3\.[89]$ ]]
 	then
