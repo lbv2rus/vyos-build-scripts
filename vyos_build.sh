@@ -52,6 +52,7 @@ BB=User
 #Uncomment on first clone#
 ##########################
 #Clone VyOs Repo before new Build (This will delete Kernel!!!!)
+#cd $GITDIR
 #rm -rf ./vyos-build
 #git clone https://github.com/vyos/vyos-build.git
 
@@ -87,7 +88,7 @@ read -p "Do you want to (re)build Kernel now? " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    ./build/linux_kernel.sh
+    	./build/linux_kernel.sh
 	./build/linux_kernel_firmware.sh	
 fi
 
